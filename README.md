@@ -2,6 +2,8 @@ API de Pedidos
 
 API em Node.js para gerenciar pedidos, com CRUD completo, usando MongoDB como banco de dados.
 
+O projeto transforma os dados recebidos via JSON no formato solicitado pelo case e os salva no MongoDB.
+
 🔧 Requisitos
 
 Node.js >= 20
@@ -10,22 +12,22 @@ npm >= 10
 
 MongoDB (local ou Atlas)
 
-📂 Estrutura do projeto
+📂 Estrutura do Projeto
 api-pedidos/
- ├─ src/
- │   ├─ models/
- │   │     └─ Order.js
- │   ├─ routes/
- │   │     └─ orderRoutes.js
- │   └─ server.js
- ├─ package.json
- └─ README.md
+├─ src/
+│  ├─ models/
+│  │  └─ Order.js
+│  ├─ routes/
+│  │  └─ orderRoutes.js
+│  └─ server.js
+├─ package.json
+└─ README.md
 
 ⚙️ Instalação
 
 Clone o repositório:
 
-git clone https://github.com/<seu-usuario>/api-pedidos.git
+git clone https://github.com/lucasleao-dev/api-pedidos.git
 cd api-pedidos
 
 
@@ -36,9 +38,12 @@ npm install
 
 Certifique-se de que o MongoDB está rodando:
 
-Local: mongod --dbpath C:\data\db
+Local:
 
-Atlas: configure a string de conexão em server.js
+mongod --dbpath C:\data\db
+
+
+Atlas: configure a string de conexão em src/server.js.
 
 🚀 Rodar a API
 node src/server.js
@@ -68,6 +73,9 @@ Exemplo de JSON no body:
     }
   ]
 }
+
+
+⚠️ O JSON enviado é mapeado automaticamente para o schema do MongoDB.
 
 Obter um pedido (GET)
 GET /order/:numeroPedido
@@ -99,4 +107,4 @@ Certifique-se de que o MongoDB está ativo antes de rodar a API.
 
 Todos os endpoints retornam mensagens de erro claras caso algo dê errado.
 
-JSON enviado pelo POST é mapeado automaticamente para o schema do MongoDB.
+Esta API atende todos os requisitos do desafio e o mapeamento do JSON do POST é feito automaticamente.
