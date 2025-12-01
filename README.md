@@ -28,8 +28,6 @@ api-pedidos/
 Clone o repositório:
 
 git clone https://github.com/lucasleao-dev/api-pedidos.git
-cd api-pedidos
-
 
 Instale as dependências:
 
